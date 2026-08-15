@@ -1,793 +1,472 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>GKNOMICS | Economics, Research & Financial Education</title>
-
-<meta name="description"
-content="GKNOMICS is a professional knowledge platform for economics, research, financial education, data, analytical tools and evidence-based learning.">
-
-<style>
-:root {
-    --primary: #12355b;
-    --secondary: #1f7a8c;
-    --accent: #f9a23b;
-    --dark: #102a43;
-    --light: #f5f7fa;
-    --white: #ffffff;
-    --text: #334e68;
-    --muted: #627d98;
-    --border: #d9e2ec;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--text);
-    background: var(--light);
-    line-height: 1.6;
-}
-
-/* NAVIGATION */
-
-header {
-    background: var(--white);
-    border-bottom: 1px solid var(--border);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.navbar {
-    max-width: 1200px;
-    margin: auto;
-    padding: 18px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 28px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    color: var(--primary);
-}
-
-.logo span {
-    color: var(--secondary);
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 24px;
-    align-items: center;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--dark);
-    font-weight: 600;
-    font-size: 14px;
-}
-
-nav a:hover {
-    color: var(--secondary);
-}
-
-/* HERO */
-
-.hero {
-    background:
-        linear-gradient(115deg,
-        rgba(18,53,91,.98),
-        rgba(31,122,140,.90));
-    color: white;
-    padding: 100px 25px;
-}
-
-.hero-content {
-    max-width: 1050px;
-    margin: auto;
-}
-
-.tag {
-    display: inline-block;
-    border: 1px solid rgba(255,255,255,.4);
-    border-radius: 30px;
-    padding: 9px 18px;
-    font-size: 13px;
-    letter-spacing: 1px;
-    margin-bottom: 25px;
-}
-
-.hero h1 {
-    font-size: clamp(42px, 6vw, 78px);
-    line-height: 1.05;
-    max-width: 850px;
-    margin-bottom: 25px;
-}
-
-.hero p {
-    font-size: 20px;
-    max-width: 750px;
-    color: #e7eef5;
-    margin-bottom: 35px;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.btn {
-    display: inline-block;
-    padding: 15px 25px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: .2s;
-}
-
-.btn-primary {
-    background: var(--accent);
-    color: var(--dark);
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px);
-}
-
-.btn-outline {
-    border: 1px solid rgba(255,255,255,.55);
-    color: white;
-}
-
-/* GENERAL SECTIONS */
-
-section {
-    padding: 80px 25px;
-}
-
-.container {
-    max-width: 1200px;
-    margin: auto;
-}
-
-.section-tag {
-    color: var(--secondary);
-    font-weight: 800;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-bottom: 12px;
-}
-
-.section-title {
-    font-size: 38px;
-    color: var(--dark);
-    margin-bottom: 15px;
-}
-
-.section-text {
-    max-width: 760px;
-    color: var(--muted);
-    font-size: 17px;
-    margin-bottom: 40px;
-}
-
-/* PLATFORM CARDS */
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
-
-.card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 30px;
-    transition: .25s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(16,42,67,.10);
-}
-
-.card-icon {
-    font-size: 32px;
-    margin-bottom: 18px;
-}
-
-.card h3 {
-    color: var(--dark);
-    margin-bottom: 10px;
-    font-size: 21px;
-}
-
-.card p {
-    color: var(--muted);
-    font-size: 15px;
-}
-
-.card a {
-    display: inline-block;
-    margin-top: 18px;
-    color: var(--secondary);
-    font-weight: 700;
-    text-decoration: none;
-}
-
-/* FEATURE SECTION */
-
-.feature-section {
-    background: var(--white);
-}
-
-.feature-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 55px;
-    align-items: center;
-}
-
-.feature-box {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    color: white;
-    border-radius: 16px;
-    padding: 45px;
-}
-
-.feature-box h2 {
-    font-size: 34px;
-    margin-bottom: 20px;
-}
-
-.feature-box p {
-    color: #e8f1f5;
-}
-
-.feature-list {
-    list-style: none;
-    margin-top: 25px;
-}
-
-.feature-list li {
-    padding: 9px 0;
-    border-bottom: 1px solid rgba(255,255,255,.18);
-}
-
-.future-list {
-    list-style: none;
-}
-
-.future-list li {
-    background: var(--light);
-    margin-bottom: 12px;
-    padding: 15px;
-    border-left: 4px solid var(--accent);
-    border-radius: 5px;
-}
-
-/* INSIGHTS */
-
-.insight-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
-
-.insight {
-    background: white;
-    padding: 28px;
-    border-radius: 10px;
-    border: 1px solid var(--border);
-}
-
-.insight small {
-    color: var(--secondary);
-    font-weight: bold;
-}
-
-.insight h3 {
-    margin: 12px 0;
-    color: var(--dark);
-}
-
-/* CALL TO ACTION */
-
-.cta {
-    background: var(--dark);
-    color: white;
-    text-align: center;
-}
-
-.cta h2 {
-    font-size: 38px;
-    margin-bottom: 15px;
-}
-
-.cta p {
-    color: #cbd7e3;
-    max-width: 700px;
-    margin: auto auto 30px;
-}
-
-/* FOOTER */
-
-footer {
-    background: #081c2c;
-    color: #b9c7d5;
-    padding: 45px 25px;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: auto;
-}
-
-.footer-logo {
-    color: white;
-    font-size: 25px;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
-
-footer p {
-    margin-top: 10px;
-    max-width: 650px;
-}
-
-.copyright {
-    border-top: 1px solid #23425e;
-    margin-top: 30px;
-    padding-top: 20px;
-    font-size: 14px;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 900px) {
-    nav ul {
-        gap: 12px;
-        font-size: 12px;
-    }
-
-    .cards,
-    .insight-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .feature-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 650px) {
-    .navbar {
-        display: block;
-    }
-
-    .logo {
-        margin-bottom: 15px;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-
-    .cards,
-    .insight-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero {
-        padding: 70px 25px;
-    }
-
-    .hero p {
-        font-size: 17px;
-    }
-
-    .section-title {
-        font-size: 30px;
-    }
-}
-.card-link {
-    display: inline-block;
-    margin-top: 15px;
-    color: var(--secondary);
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.card-link:hover {
-    color: var(--primary);
-    text-decoration: underline;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GKNOMICS | Economics, Research and Financial Education</title>
+
+    <meta name="description"
+        content="GKNOMICS is a professional platform for economics, research, education, financial education, data, analytical tools and evidence-based knowledge.">
+
+    <style>
+        :root {
+            --primary: #17324d;
+            --secondary: #285b72;
+            --accent: #e9a23b;
+            --light: #f5f7fa;
+            --white: #ffffff;
+            --text: #243746;
+            --muted: #61717c;
+            --border: #d9e1e7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--light);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        /* HEADER */
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            padding: 18px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 8px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            padding: 8px 10px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            padding: 100px 25px;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .tag {
+            display: inline-block;
+            border: 1px solid rgba(255,255,255,0.45);
+            padding: 7px 16px;
+            border-radius: 30px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 76px);
+            line-height: 1.1;
+            max-width: 850px;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            color: #e5edf2;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--primary);
+        }
+
+        .btn-secondary {
+            border: 1px solid rgba(255,255,255,0.5);
+            color: var(--white);
+        }
+
+        /* MAIN */
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 75px 25px;
+        }
+
+        .section-tag {
+            color: var(--accent);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 36px;
+            line-height: 1.25;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            max-width: 900px;
+            font-size: 18px;
+            color: var(--muted);
+        }
+
+        /* FOCUS AREAS */
+        .focus-section {
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+            margin-top: 35px;
+        }
+
+        .card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            padding: 28px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--secondary);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        /* EXPLORE */
+        .explore {
+            text-align: center;
+        }
+
+        .explore p {
+            color: var(--muted);
+            max-width: 750px;
+            margin: 0 auto 30px;
+        }
+
+        .explore-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .explore-links a {
+            text-decoration: none;
+            color: var(--primary);
+            border: 1px solid var(--border);
+            background: var(--white);
+            padding: 12px 18px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .explore-links a:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--primary);
+            color: #dce5ea;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 14px;
+        }
+
+        footer strong {
+            color: var(--white);
+        }
+
+        /* MOBILE */
+        @media (max-width: 850px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                justify-content: flex-start;
+            }
+
+            .hero {
+                padding: 70px 25px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            h2 {
+                font-size: 30px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-    <div class="navbar">
-        <div class="logo">GK<span>NOMICS</span></div>
+    <!-- HEADER -->
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo">GKNOMICS</a>
 
-        <nav>
-            <ul>
-                <li><a href="#economics">Economics</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#finance">Finance</a></li>
-                <li><a href="#learn">Learn</a></li>
-                <li><a href="#data">Data & Tools</a></li>
-                <li><a href="#insights">Insights</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-
-<main>
-
-<!-- HERO -->
-
-<section class="hero">
-    <div class="hero-content">
-
-        <div class="tag">
-            ECONOMICS • RESEARCH • FINANCE • DATA • LEARNING
+            <nav>
+                <a href="index.html">About</a>
+                <a href="academic-working-life.html">Academic & Working Life</a>
+                <a href="courses.html">Courses</a>
+                <a href="research.html">Research</a>
+                <a href="publications.html">Publications</a>
+                <a href="training-presentations.html">Training & Presentations</a>
+                <a href="awards-associations.html">Awards & Associations</a>
+                <a href="data-tools.html">Data & Tools</a>
+                <a href="economics.html">Economics</a>
+                <a href="finance.html">Finance</a>
+                <a href="insights.html">Insights</a>
+            </nav>
         </div>
-
-        <h1>Knowledge for a Changing World.</h1>
-
-        <p>
-            GKNOMICS is an independent professional knowledge platform
-            bringing together economics, research, financial education,
-            data, analytical tools and evidence-based learning.
-        </p>
-
-        <div class="hero-buttons">
-            <a href="#resources" class="btn btn-primary">Explore Resources</a>
-            <a href="#research" class="btn btn-outline">Explore Research</a>
-        </div>
-
-    </div>
-</section>
+    </header>
 
 
-<!-- GKNOMICS ECOSYSTEM -->
+    <!-- HOME / ABOUT -->
+    <section class="hero">
+        <div class="hero-content">
 
-<section id="resources">
-    <div class="container">
-
-        <div class="section-tag">The GKNOMICS Ecosystem</div>
-
-        <h2 class="section-title">
-            Explore Knowledge. Analyse Evidence. Build Understanding.
-        </h2>
-
-        <p class="section-text">
-            GKNOMICS is designed as a growing knowledge ecosystem.
-            Its resources connect economic understanding, academic research,
-            financial literacy, learning, data and analytical thinking.
-        </p>
-
-        <div class="cards">
-
-            <div class="card" id="economics">
-                <div class="card-icon">📊</div>
-                <h3>Economics</h3>
-                <p>
-                    Explore economic concepts, policy issues, development,
-                    public finance, the Indian economy and evidence-based analysis.
-                </p>
-                <a href="#">Explore Economics →</a>
+            <div class="tag">
+                ECONOMICS • RESEARCH • EDUCATION • FINANCE • DATA
             </div>
 
-           <!-- RESEARCH -->
-<section id="research" class="feature-section">
-    <div class="container">
+            <h1>Knowledge for an Informed World.</h1>
 
-        <div class="section-tag">RESEARCH</div>
+            <p>
+                GKNOMICS is an independent knowledge platform dedicated to
+                economics, research, education, financial education, data and
+                evidence-based analysis. It brings together academic work,
+                learning resources, publications, analytical tools and practical
+                insights for students, researchers, educators and lifelong learners.
+            </p>
 
-        <h2 class="section-title">
-            Advancing Knowledge Through Research and Evidence
-        </h2>
-
-        <p class="section-text">
-            GKNOMICS provides a dedicated space for research, scholarly inquiry and
-            evidence-based analysis. The platform brings together research
-            publications, working papers, research resources, data sources and
-            analytical perspectives across economics and related fields.
-        </p>
-
-        <div class="feature-grid">
-
-            <div class="feature-card">
-    <h3>Research Publications</h3>
-    <p>
-        Explore journal articles, book chapters and books covering microfinance,
-        development economics, financial inclusion, agriculture, inequality,
-        sustainability and related areas.
-    </p>
-    <a href="publications.html" class="card-link">
-        View Publications →
-    </a>
-</div>
-
-            <div class="feature-card">
-                <h3>Research Resources</h3>
-                <p>
-                    Explore useful resources for research design, methodology,
-                    literature review, data analysis and academic writing.
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <h3>Data and Analysis</h3>
-                <p>
-                    Discover important data sources, analytical tools and resources
-                    that support rigorous and evidence-based research.
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <h3>Research Insights</h3>
-                <p>
-                    Engage with analytical perspectives and insights on economic,
-                    development and contemporary policy issues.
-                </p>
-            </div>
+            <a href="research.html" class="btn btn-primary">Explore Research</a>
+            <a href="publications.html" class="btn btn-secondary">View Publications</a>
 
         </div>
+    </section>
 
-    </div>
-</section>
-            <div class="card" id="finance">
-                <div class="card-icon">💰</div>
-                <h3>Financial Education</h3>
-                <p>
-                    Build financial knowledge through accessible learning
-                    resources on personal finance, financial planning and investing.
-                </p>
-                <a href="#">Start Learning →</a>
-            </div>
 
-            <div class="card" id="learn">
-                <div class="card-icon">🎓</div>
-                <h3>Learn</h3>
-                <p>
-                    Discover courses, lecture notes, study materials,
-                    research methodology and structured learning resources.
-                </p>
-                <a href="#">Explore Learning →</a>
-            </div>
+    <!-- ABOUT GKNOMICS -->
+    <section>
+        <div class="container">
 
-            <div class="card" id="data">
-                <div class="card-icon">📈</div>
-                <h3>Data & Tools</h3>
-                <p>
-                    Find reliable economic data sources, research tools,
-                    statistical resources and analytical platforms.
-                </p>
-                <a href="#">Explore Data & Tools →</a>
-            </div>
+            <div class="section-tag">About GKNOMICS</div>
 
-            <div class="card">
-                <div class="card-icon">📚</div>
-                <h3>Resource Hub</h3>
-                <p>
-                    A curated collection of economics, research, data,
-                    software, finance and professional learning resources.
-                </p>
-                <a href="#">Visit Resource Hub →</a>
-            </div>
+            <h2>An Independent Knowledge Platform</h2>
+
+            <p class="intro">
+                GKNOMICS is developed as a growing digital platform for the
+                systematic sharing of knowledge and ideas in economics, research,
+                higher education, financial education and data analysis. The
+                platform aims to make academic and analytical resources more
+                accessible, understandable and useful by connecting research with
+                learning and practical application.
+            </p>
 
         </div>
-
-    </div>
-</section>
+    </section>
 
 
-<!-- FINANCIAL EDUCATION -->
+    <!-- MAIN AREAS -->
+    <section class="focus-section">
+        <div class="container">
 
-<section class="feature-section">
-    <div class="container">
+            <div class="section-tag">Core Areas</div>
 
-        <div class="feature-grid">
+            <h2>What You Can Explore</h2>
 
-            <div class="feature-box">
+            <div class="grid">
 
-                <div class="section-tag" style="color:#f9c26b;">
-                    FINANCIAL EDUCATION
+                <div class="card">
+                    <h3>Academic & Working Life</h3>
+                    <p>
+                        Academic journey, professional experience, institutional
+                        engagement and areas of work.
+                    </p>
+                    <a href="academic-working-life.html">Explore →</a>
                 </div>
 
-                <h2>Financial Knowledge for Better Decisions.</h2>
+                <div class="card">
+                    <h3>Research</h3>
+                    <p>
+                        Research interests, projects, ongoing work, datasets and
+                        evidence-based academic inquiry.
+                    </p>
+                    <a href="research.html">Explore →</a>
+                </div>
 
-                <p>
-                    Financial education will be a major pillar of GKNOMICS,
-                    focused on improving understanding of money, financial
-                    planning, risk, investing and the Indian financial system.
-                </p>
+                <div class="card">
+                    <h3>Publications</h3>
+                    <p>
+                        Journal articles, book chapters, books and other scholarly
+                        contributions.
+                    </p>
+                    <a href="publications.html">Explore →</a>
+                </div>
 
-                <ul class="feature-list">
-                    <li>Personal Financial Planning</li>
-                    <li>Saving and Budgeting</li>
-                    <li>Insurance and Risk</li>
-                    <li>Investment Fundamentals</li>
-                    <li>Retirement Planning</li>
-                    <li>Indian Financial System</li>
-                </ul>
+                <div class="card">
+                    <h3>Financial Education</h3>
+                    <p>
+                        Learning resources and practical discussions on personal
+                        finance, financial literacy and informed decision-making.
+                    </p>
+                    <a href="finance.html">Explore →</a>
+                </div>
 
-            </div>
+                <div class="card">
+                    <h3>Economics</h3>
+                    <p>
+                        Concepts, teaching resources, contemporary issues and
+                        discussions in economics.
+                    </p>
+                    <a href="economics.html">Explore →</a>
+                </div>
 
-            <div>
+                <div class="card">
+                    <h3>Data & Tools</h3>
+                    <p>
+                        Useful data sources, analytical resources, research tools
+                        and practical applications.
+                    </p>
+                    <a href="data-tools.html">Explore →</a>
+                </div>
 
-                <div class="section-tag">Future Development</div>
-
-                <h2 class="section-title">
-                    Designed to Grow with GKNOMICS
-                </h2>
-
-                <p class="section-text">
-                    The platform will gradually expand from professional
-                    learning resources into interactive knowledge and
-                    analytical tools.
-                </p>
-
-                <ul class="future-list">
-                    <li>Financial Calculators</li>
-                    <li>Economics Data Dashboards</li>
-                    <li>Interactive Data Visualizations</li>
-                    <li>Searchable Resource Library</li>
-                    <li>Research and Analytical Tools</li>
-                    <li>Structured Digital Learning Modules</li>
-                </ul>
-
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-
-<!-- INSIGHTS -->
-
-<section id="insights">
-    <div class="container">
-
-        <div class="section-tag">GKNOMICS Insights</div>
-
-        <h2 class="section-title">
-            Ideas, Evidence and Analysis
-        </h2>
-
-        <p class="section-text">
-            GKNOMICS Insights will present accessible and evidence-based
-            perspectives on economics, finance, development, education
-            and contemporary issues.
-        </p>
-
-        <div class="insight-grid">
-
-            <div class="insight">
-                <small>ECONOMY & POLICY</small>
-                <h3>Economic Analysis</h3>
-                <p>
-                    Evidence-based discussion of important economic
-                    developments, policy issues and changing trends.
-                </p>
-            </div>
-
-            <div class="insight">
-                <small>DATA STORIES</small>
-                <h3>Understanding Data</h3>
-                <p>
-                    Turning economic and social data into meaningful
-                    insights through accessible analysis and visualization.
-                </p>
-            </div>
-
-            <div class="insight">
-                <small>RESEARCH INSIGHTS</small>
-                <h3>From Research to Knowledge</h3>
-                <p>
-                    Research findings, methodological perspectives
-                    and ideas that support deeper understanding.
-                </p>
             </div>
 
         </div>
-
-    </div>
-</section>
+    </section>
 
 
-<!-- ABOUT -->
-<section id="about" class="feature-section">
-    <div class="container">
+    <!-- EXPLORE ALL -->
+    <section>
+        <div class="container explore">
 
-        <div class="section-tag">ABOUT GKNOMICS</div>
+            <div class="section-tag">Explore</div>
 
-        <h2 class="section-title">
-            An Independent Platform for Knowledge, Research and Financial Education
-        </h2>
+            <h2>Navigate the Knowledge Platform</h2>
 
-        <p class="section-text">
-            GKNOMICS is an independent knowledge platform focused on economics,
-            research, education, data and financial education. It is being developed
-            as a growing digital ecosystem for students, researchers, educators,
-            professionals and lifelong learners.
-        </p>
+            <p>
+                Explore the different sections of GKNOMICS for academic resources,
+                research outputs, learning materials, professional activities,
+                financial education and analytical discussions.
+            </p>
 
-        <p class="section-text">
-            The platform brings together academic knowledge, research resources,
-            data sources, analytical tools, learning materials and practical insights
-            to promote evidence-based thinking, research excellence and informed
-            financial decision-making.
-        </p>
+            <div class="explore-links">
+                <a href="academic-working-life.html">Academic & Working Life</a>
+                <a href="courses.html">Courses</a>
+                <a href="research.html">Research</a>
+                <a href="publications.html">Publications</a>
+                <a href="training-presentations.html">Training & Presentations</a>
+                <a href="awards-associations.html">Awards & Associations</a>
+                <a href="data-tools.html">Data & Tools</a>
+                <a href="economics.html">Economics</a>
+                <a href="finance.html">Finance</a>
+                <a href="insights.html">Insights</a>
+            </div>
 
-    </div>
-</section>
+        </div>
+    </section>
 
 
-<!-- CTA -->
-
-<section class="cta">
-    <div class="container">
-
-        <h2>Learn. Research. Analyse. Grow.</h2>
-
+    <!-- FOOTER -->
+    <footer>
         <p>
-            Explore a growing collection of knowledge, resources and tools
-            designed for a changing economic and financial world.
+            <strong>GKNOMICS</strong><br>
+            Economics • Research • Education • Financial Education • Data
         </p>
-
-        <a href="#resources" class="btn btn-primary">
-            Start Exploring
-        </a>
-
-    </div>
-</section>
-
-</main>
-
-
-<footer>
-    <div class="footer-container">
-
-        <div class="footer-logo">GKNOMICS</div>
-
-        <p>
-            Economics • Research • Financial Education • Data • Learning
-        </p>
-
-        <div class="copyright">
-            © 2026 GKNOMICS. All rights reserved.
-        </div>
-
-    </div>
-</footer>
+    </footer>
 
 </body>
 </html>
