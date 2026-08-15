@@ -1,1 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses | GKNOMICS</title>
+    <meta name="description" content="Undergraduate courses taught and currently offered by Gopal Kumar Sarma in Economics and related areas.">
+    <style>
+        :root {
+            --primary: #17324d;
+            --secondary: #285b72;
+            --accent: #e9a23b;
+            --light: #f5f7fa;
+            --white: #ffffff;
+            --text: #243746;
+            --muted: #61717c;
+            --border: #d9e1e7;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--light);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        /* HEADER – ONE LINE */
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 16px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: 800;
+            letter-spacing: 1.8px;
+            color: var(--primary);
+            text-decoration: none;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            gap: 2px;
+            overflow-x: auto;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 13.2px;
+            padding: 6px 8px;
+            white-space: nowrap;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* PAGE HEADER */
+        .page-header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 48px 28px 40px;
+        }
+
+        .page-header-inner {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .section-tag {
+            color: var(--accent);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .page-header h1 {
+            color: var(--primary);
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 12px;
+        }
+
+        .page-header p {
+            color: var(--muted);
+            font-size: 17px;
+            max-width: 640px;
+        }
+
+        /* MAIN CONTENT */
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 56px 28px 70px;
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 21px;
+            font-weight: 700;
+            margin: 48px 0 20px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .level-note {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 18px;
+            font-style: italic;
+        }
+
+        ul.course-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul.course-list li {
+            position: relative;
+            padding: 9px 0 9px 18px;
+            font-size: 16px;
+            color: var(--text);
+            border-bottom: 1px solid #eef1f4;
+        }
+
+        ul.course-list li:last-child {
+            border-bottom: none;
+        }
+
+        ul.course-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 18px;
+            width: 6px;
+            height: 6px;
+            background: var(--secondary);
+            border-radius: 50%;
+        }
+
+        .certificate-box {
+            margin-top: 12px;
+            padding: 18px 20px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 5px;
+        }
+
+        .certificate-box strong {
+            color: var(--primary);
+            display: block;
+            margin-bottom: 4px;
+            font-size: 16px;
+        }
+
+        .certificate-box span {
+            font-size: 14.5px;
+            color: var(--muted);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--primary);
+            color: #d5e0e7;
+            text-align: center;
+            padding: 26px 20px;
+            font-size: 13.5px;
+        }
+
+        footer strong {
+            color: var(--white);
+        }
+
+        /* MOBILE */
+        @media (max-width: 980px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+                padding: 14px 20px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                gap: 4px 6px;
+            }
+
+            nav a {
+                font-size: 13px;
+                padding: 5px 7px;
+            }
+
+            .page-header h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo">GKNOMICS</a>
+            <nav>
+                <a href="index.html">About</a>
+                <a href="academic-working-life.html">Academic & Working Life</a>
+                <a href="courses.html">Courses</a>
+                <a href="research.html">Research</a>
+                <a href="publications.html">Publications</a>
+                <a href="training-presentations.html">Training & Presentations</a>
+                <a href="awards-associations.html">Awards & Associations</a>
+                <a href="data-tools.html">Data & Tools</a>
+                <a href="economics.html">Economics</a>
+                <a href="finance.html">Finance</a>
+                <a href="insights.html">Insights</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+        <div class="page-header-inner">
+            <div class="section-tag">Teaching</div>
+            <h1>Courses</h1>
+            <p>Undergraduate courses taught and currently offered in Economics and related areas.</p>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+
+        <!-- CURRENT COURSES -->
+        <h2>Current Courses</h2>
+        <p class="level-note">At undergraduate level</p>
+
+        <ul class="course-list">
+            <li>Mathematical Economics-II</li>
+            <li>International Economics-I</li>
+            <li>Entrepreneurship Development</li>
+            <li>Statistical Methods For Economics -I</li>
+            <li>Introductory Economics-I</li>
+            <li>Data Collection, Analysis and Presentation</li>
+        </ul>
+
+        <!-- COURSES TAUGHT -->
+        <h2>Courses Taught</h2>
+        <p class="level-note">At undergraduate level</p>
+
+        <ul class="course-list">
+            <li>Microeconomics</li>
+            <li>Macroeconomics</li>
+            <li>Development Economics</li>
+            <li>International Economics</li>
+            <li>Mathematical Economics</li>
+            <li>Statistics for Economics</li>
+            <li>Basic Econometrics</li>
+            <li>Environmental Economics</li>
+            <li>Demography</li>
+            <li>Computer Application in Economics</li>
+            <li>Data Collection, Analysis and Presentation</li>
+            <li>Community Based Participatory Research</li>
+        </ul>
+
+        <!-- CERTIFICATE COURSE -->
+        <h2>Certificate Course</h2>
+
+        <div class="certificate-box">
+            <strong>Certificate Course on Microsoft Office</strong>
+            <span>Completed</span>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            <strong>GKNOMICS</strong><br>
+            Economics · Research · Education · Financial Education · Data
+        </p>
+    </footer>
+
+</body>
+</html>
