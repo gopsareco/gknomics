@@ -34,7 +34,7 @@
             line-height: 1.7;
         }
 
-        /* HEADER */
+        /* ========== HEADER – ONE LINE ========== */
         header {
             background: var(--white);
             border-bottom: 1px solid var(--border);
@@ -44,91 +44,94 @@
         }
 
         .navbar {
-            max-width: 1100px;
-            margin: auto;
-            padding: 18px 25px;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 16px 28px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            gap: 25px;
+            justify-content: space-between;
+            gap: 28px;
         }
 
         .logo {
-            font-size: 26px;
+            font-size: 27px;
             font-weight: 800;
-            letter-spacing: 1.5px;
+            letter-spacing: 1.8px;
             color: var(--primary);
             text-decoration: none;
+            white-space: nowrap;
+            flex-shrink: 0;
         }
 
         nav {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-            gap: 6px;
+            flex-wrap: nowrap;          /* force single line */
+            align-items: center;
+            gap: 2px;
+            overflow-x: auto;           /* safety on very small desktops */
         }
 
         nav a {
             text-decoration: none;
             color: var(--primary);
             font-weight: 600;
-            padding: 7px 9px;
-            font-size: 13.5px;
-            transition: 0.25s;
+            font-size: 13.2px;
+            padding: 6px 8px;
+            white-space: nowrap;
+            transition: color 0.2s ease;
         }
 
         nav a:hover {
             color: var(--accent);
         }
 
-        /* HERO */
+        /* ========== HERO ========== */
         .hero {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: var(--white);
-            padding: 90px 25px 85px;
+            padding: 88px 28px 80px;
         }
 
         .hero-content {
-            max-width: 900px;
-            margin: auto;
+            max-width: 860px;
+            margin: 0 auto;
         }
 
         .tag {
             display: inline-block;
-            border: 1px solid rgba(255,255,255,0.4);
-            padding: 6px 14px;
+            border: 1px solid rgba(255,255,255,0.38);
+            padding: 5px 13px;
             border-radius: 30px;
-            font-size: 13px;
-            letter-spacing: 1px;
-            margin-bottom: 22px;
+            font-size: 12.5px;
+            letter-spacing: 1.1px;
+            margin-bottom: 20px;
             opacity: 0.95;
         }
 
         .hero h1 {
-            font-size: clamp(38px, 6.5vw, 64px);
+            font-size: clamp(36px, 6vw, 58px);
             line-height: 1.12;
-            max-width: 820px;
-            margin-bottom: 22px;
+            margin-bottom: 20px;
             font-weight: 700;
         }
 
         .hero p {
-            font-size: 18.5px;
-            max-width: 740px;
+            font-size: 18px;
+            max-width: 720px;
             color: #e4edf3;
-            margin-bottom: 28px;
+            margin-bottom: 26px;
             line-height: 1.65;
         }
 
         .btn {
             display: inline-block;
-            padding: 13px 22px;
+            padding: 12px 20px;
             border-radius: 4px;
             text-decoration: none;
             font-weight: 700;
             margin-right: 10px;
-            margin-top: 8px;
-            font-size: 15px;
+            margin-top: 6px;
+            font-size: 14.5px;
         }
 
         .btn-primary {
@@ -137,29 +140,29 @@
         }
 
         .btn-secondary {
-            border: 1px solid rgba(255,255,255,0.45);
+            border: 1px solid rgba(255,255,255,0.42);
             color: var(--white);
         }
 
-        /* MAIN */
+        /* ========== ABOUT ========== */
         .container {
-            max-width: 860px;
-            margin: auto;
-            padding: 70px 25px;
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 72px 28px;
         }
 
         .section-tag {
             color: var(--accent);
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-size: 12.5px;
-            margin-bottom: 12px;
+            letter-spacing: 1.4px;
+            font-size: 12px;
+            margin-bottom: 10px;
         }
 
         h2 {
             color: var(--primary);
-            font-size: 32px;
+            font-size: 30px;
             line-height: 1.25;
             margin-bottom: 28px;
             font-weight: 700;
@@ -167,16 +170,16 @@
 
         h3 {
             color: var(--primary);
-            font-size: 22px;
-            margin: 42px 0 16px;
+            font-size: 20px;
+            margin: 40px 0 14px;
             font-weight: 700;
         }
 
         .about-text p {
-            font-size: 17px;
+            font-size: 16.8px;
             color: var(--text);
-            margin-bottom: 18px;
-            max-width: 780px;
+            margin-bottom: 17px;
+            line-height: 1.72;
         }
 
         .about-text p:last-child {
@@ -185,151 +188,67 @@
 
         /* Quote */
         .quote-block {
-            margin: 0 0 36px;
-            padding: 22px 0 22px 22px;
+            margin: 0 0 34px;
+            padding: 18px 0 18px 20px;
             border-left: 3px solid var(--accent);
         }
 
         .quote-block blockquote {
-            font-size: 19px;
+            font-size: 18.5px;
             font-style: italic;
             color: var(--primary);
-            line-height: 1.55;
-            margin-bottom: 8px;
+            line-height: 1.5;
+            margin-bottom: 6px;
         }
 
         .quote-block cite {
-            font-size: 14px;
+            font-size: 13.5px;
             color: var(--muted);
             font-style: normal;
         }
 
-        /* FOCUS AREAS */
-        .focus-section {
-            background: var(--white);
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .focus-section .container {
-            max-width: 1100px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 18px;
-            margin-top: 32px;
-        }
-
-        .card {
-            background: var(--white);
-            border: 1px solid var(--border);
-            padding: 26px;
-            border-radius: 6px;
-            transition: 0.25s;
-        }
-
-        .card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-        }
-
-        .card h3 {
-            color: var(--primary);
-            margin: 0 0 10px;
-            font-size: 18px;
-        }
-
-        .card p {
-            color: var(--muted);
-            font-size: 14.5px;
-            margin-bottom: 14px;
-            line-height: 1.55;
-        }
-
-        .card a {
-            display: inline-block;
-            color: var(--secondary);
-            font-weight: 700;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        /* EXPLORE */
-        .explore {
-            text-align: center;
-        }
-
-        .explore .container {
-            max-width: 900px;
-        }
-
-        .explore p {
-            color: var(--muted);
-            max-width: 680px;
-            margin: 0 auto 28px;
-            font-size: 16.5px;
-        }
-
-        .explore-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .explore-links a {
-            text-decoration: none;
-            color: var(--primary);
-            border: 1px solid var(--border);
-            background: var(--white);
-            padding: 11px 16px;
-            border-radius: 4px;
-            font-weight: 600;
-            font-size: 14px;
-            transition: 0.25s;
-        }
-
-        .explore-links a:hover {
-            background: var(--primary);
-            color: var(--white);
-            border-color: var(--primary);
-        }
-
-        /* FOOTER */
+        /* ========== FOOTER ========== */
         footer {
             background: var(--primary);
             color: #d5e0e7;
             text-align: center;
-            padding: 28px 20px;
-            font-size: 14px;
+            padding: 26px 20px;
+            font-size: 13.5px;
         }
 
         footer strong {
             color: var(--white);
         }
 
-        /* MOBILE */
-        @media (max-width: 850px) {
+        /* ========== MOBILE ========== */
+        @media (max-width: 980px) {
             .navbar {
                 flex-direction: column;
                 align-items: flex-start;
+                gap: 12px;
+                padding: 14px 20px;
             }
+
             nav {
-                justify-content: flex-start;
+                flex-wrap: wrap;
+                gap: 4px 6px;
             }
+
+            nav a {
+                font-size: 13px;
+                padding: 5px 7px;
+            }
+
             .hero {
-                padding: 65px 25px 60px;
+                padding: 60px 22px 55px;
             }
+
             .hero p {
                 font-size: 16.5px;
             }
+
             h2 {
-                font-size: 28px;
-            }
-            .quote-block blockquote {
-                font-size: 17.5px;
+                font-size: 26px;
             }
         }
     </style>
@@ -397,68 +316,6 @@
             <p>This website is therefore not intended simply as a personal archive or portfolio. It is conceived as a long-term, independent knowledge platform — one that will develop gradually through sustained work, new research, teaching resources, data, tools and informed discussion.</p>
 
             <p>At its core, GKNOMICS stands for a continuing process: to learn, to question, to examine evidence, to recognise the limits of what we know, and to keep searching for better understanding.</p>
-        </div>
-    </section>
-
-    <!-- CORE AREAS -->
-    <section class="focus-section">
-        <div class="container">
-            <div class="section-tag">Core Areas</div>
-            <h2>What You Can Explore</h2>
-
-            <div class="grid">
-                <div class="card">
-                    <h3>Academic & Working Life</h3>
-                    <p>Academic journey, professional experience, institutional engagement and areas of work.</p>
-                    <a href="academic-working-life.html">Explore →</a>
-                </div>
-                <div class="card">
-                    <h3>Research</h3>
-                    <p>Research interests, projects, ongoing work and evidence-based academic inquiry.</p>
-                    <a href="research.html">Explore →</a>
-                </div>
-                <div class="card">
-                    <h3>Publications</h3>
-                    <p>Journal articles, book chapters, books and other scholarly contributions.</p>
-                    <a href="publications.html">Explore →</a>
-                </div>
-                <div class="card">
-                    <h3>Financial Education</h3>
-                    <p>Learning resources and discussions on personal finance, financial literacy and informed decision-making.</p>
-                    <a href="finance.html">Explore →</a>
-                </div>
-                <div class="card">
-                    <h3>Economics</h3>
-                    <p>Concepts, teaching resources, contemporary issues and discussions in economics.</p>
-                    <a href="economics.html">Explore →</a>
-                </div>
-                <div class="card">
-                    <h3>Data & Tools</h3>
-                    <p>Useful data sources, analytical resources, research tools and practical applications.</p>
-                    <a href="data-tools.html">Explore →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- EXPLORE -->
-    <section>
-        <div class="container explore">
-            <div class="section-tag">Explore</div>
-            <h2>Navigate the Knowledge Platform</h2>
-            <p>Explore the different sections of GKNOMICS for academic resources, research outputs, learning materials, professional activities, financial education and analytical discussions.</p>
-            <div class="explore-links">
-                <a href="academic-working-life.html">Academic & Working Life</a>
-                <a href="courses.html">Courses</a>
-                <a href="research.html">Research</a>
-                <a href="publications.html">Publications</a>
-                <a href="training-presentations.html">Training & Presentations</a>
-                <a href="awards-associations.html">Awards & Associations</a>
-                <a href="data-tools.html">Data & Tools</a>
-                <a href="economics.html">Economics</a>
-                <a href="finance.html">Finance</a>
-                <a href="insights.html">Insights</a>
-            </div>
         </div>
     </section>
 
