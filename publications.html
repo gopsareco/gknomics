@@ -1,621 +1,499 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | GKNOMICS</title>
+    <meta name="description" content="Journal articles, book chapters and books by Gopal Kumar Sarma on microfinance, development economics, financial inclusion, agriculture, inequality, circular economy and data.">
+    <style>
+        :root {
+            --primary: #17324d;
+            --secondary: #285b72;
+            --accent: #e9a23b;
+            --light: #f5f7fa;
+            --white: #ffffff;
+            --text: #243746;
+            --muted: #61717c;
+            --border: #d9e1e7;
+        }
 
-<title>Research Publications | GKNOMICS</title>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<meta name="description" content="Research publications, book chapters and books covering microfinance, development economics, agriculture, financial inclusion, inequality, circular economy and data.">
+        html {
+            scroll-behavior: smooth;
+        }
 
-<style>
-:root {
-    --primary: #12355b;
-    --secondary: #1f7a8c;
-    --dark: #102a43;
-    --light: #f5f7fa;
-    --white: #ffffff;
-    --text: #334e68;
-    --muted: #627d98;
-    --border: #d9e2ec;
-}
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--light);
+            color: var(--text);
+            line-height: 1.7;
+        }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        /* HEADER – ONE LINE */
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-html {
-    scroll-behavior: smooth;
-}
+        .navbar {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 16px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px;
+        }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--text);
-    background: var(--light);
-    line-height: 1.65;
-}
+        .logo {
+            font-size: 27px;
+            font-weight: 800;
+            letter-spacing: 1.8px;
+            color: var(--primary);
+            text-decoration: none;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
 
-header {
-    background: var(--white);
-    border-bottom: 1px solid var(--border);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+        nav {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            gap: 2px;
+            overflow-x: auto;
+        }
 
-.navbar {
-    max-width: 1200px;
-    margin: auto;
-    padding: 18px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 25px;
-}
+        nav a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 13.2px;
+            padding: 6px 8px;
+            white-space: nowrap;
+            transition: color 0.2s ease;
+        }
 
-.logo {
-    text-decoration: none;
-    font-size: 28px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    color: var(--primary);
-}
+        nav a:hover {
+            color: var(--accent);
+        }
 
-.logo span {
-    color: var(--secondary);
-}
+        /* PAGE HEADER */
+        .page-header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 48px 28px 40px;
+        }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
+        .page-header-inner {
+            max-width: 820px;
+            margin: 0 auto;
+        }
 
-nav a {
-    text-decoration: none;
-    color: var(--dark);
-    font-size: 14px;
-    font-weight: 600;
-}
+        .section-tag {
+            color: var(--accent);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
 
-nav a:hover {
-    color: var(--secondary);
-}
+        .page-header h1 {
+            color: var(--primary);
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 12px;
+        }
 
-/* HERO */
+        .page-header p {
+            color: var(--muted);
+            font-size: 17px;
+            max-width: 680px;
+        }
 
-.hero {
-    background: linear-gradient(120deg, var(--primary), var(--secondary));
-    color: white;
-    padding: 75px 25px;
-}
+        /* MAIN CONTENT */
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 56px 28px 70px;
+        }
 
-.hero-content {
-    max-width: 1100px;
-    margin: auto;
-}
+        h2 {
+            color: var(--primary);
+            font-size: 21px;
+            font-weight: 700;
+            margin: 52px 0 24px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
 
-.hero-tag {
-    display: inline-block;
-    padding: 7px 14px;
-    border: 1px solid rgba(255,255,255,.4);
-    border-radius: 25px;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 18px;
-}
+        h2:first-of-type {
+            margin-top: 0;
+        }
 
-.hero h1 {
-    font-size: clamp(38px, 6vw, 64px);
-    margin-bottom: 15px;
-}
+        /* PUBLICATION ITEM */
+        .pub-item {
+            margin-bottom: 28px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid #eef1f4;
+        }
 
-.hero p {
-    max-width: 760px;
-    font-size: 18px;
-    color: #e5f0f3;
-}
+        .pub-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
 
-/* GENERAL */
+        .pub-meta {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 6px;
+            letter-spacing: 0.3px;
+        }
 
-section {
-    padding: 65px 25px;
-}
+        .pub-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
 
-.container {
-    max-width: 1100px;
-    margin: auto;
-}
+        .pub-title a {
+            color: var(--primary);
+            text-decoration: none;
+        }
 
-.section-tag {
-    color: var(--secondary);
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    margin-bottom: 10px;
-}
+        .pub-title a:hover {
+            color: var(--secondary);
+        }
 
-.section-title {
-    color: var(--dark);
-    font-size: 32px;
-    margin-bottom: 10px;
-}
+        .pub-citation {
+            font-size: 15px;
+            color: var(--muted);
+            line-height: 1.55;
+        }
 
-.section-intro {
-    color: var(--muted);
-    max-width: 850px;
-    margin-bottom: 30px;
-}
+        .pub-citation em {
+            font-style: italic;
+        }
 
-/* PUBLICATIONS */
+        /* FOOTER */
+        footer {
+            background: var(--primary);
+            color: #d5e0e7;
+            text-align: center;
+            padding: 26px 20px;
+            font-size: 13.5px;
+        }
 
-.publication-list {
-    display: grid;
-    gap: 18px;
-}
+        footer strong {
+            color: var(--white);
+        }
 
-.publication {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 24px 26px;
-    transition: 0.2s ease;
-}
+        /* MOBILE */
+        @media (max-width: 980px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+                padding: 14px 20px;
+            }
 
-.publication:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(16,42,67,.08);
-}
+            nav {
+                flex-wrap: wrap;
+                gap: 4px 6px;
+            }
 
-.pub-number {
-    color: var(--secondary);
-    font-weight: 800;
-    font-size: 14px;
-    margin-bottom: 7px;
-}
+            nav a {
+                font-size: 13px;
+                padding: 5px 7px;
+            }
 
-.publication h3 {
-    color: var(--dark);
-    font-size: 18px;
-    line-height: 1.4;
-    margin-bottom: 10px;
-}
-
-.publication h3 a {
-    color: var(--dark);
-    text-decoration: none;
-}
-
-.publication h3 a:hover {
-    color: var(--secondary);
-}
-
-.citation {
-    color: var(--muted);
-    font-size: 15px;
-}
-
-.alternate-section {
-    background: var(--white);
-}
-
-/* FOOTER */
-
-footer {
-    background: #081c2c;
-    color: #b9c7d5;
-    padding: 40px 25px;
-}
-
-.footer-container {
-    max-width: 1100px;
-    margin: auto;
-}
-
-.footer-logo {
-    color: white;
-    font-size: 24px;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
-
-.footer-text {
-    margin-top: 10px;
-}
-
-.copyright {
-    border-top: 1px solid #23425e;
-    margin-top: 22px;
-    padding-top: 18px;
-    font-size: 14px;
-}
-
-/* MOBILE */
-
-@media (max-width: 750px) {
-    .navbar {
-        display: block;
-    }
-
-    .logo {
-        display: inline-block;
-        margin-bottom: 15px;
-    }
-
-    nav ul {
-        gap: 12px;
-    }
-
-    .publication {
-        padding: 20px;
-    }
-}
-</style>
+            .page-header h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-    <div class="navbar">
+    <!-- HEADER -->
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo">GKNOMICS</a>
+            <nav>
+                <a href="index.html">About</a>
+                <a href="academic-working-life.html">Academic & Working Life</a>
+                <a href="courses.html">Courses</a>
+                <a href="research.html">Research</a>
+                <a href="publications.html">Publications</a>
+                <a href="training-presentations.html">Training & Presentations</a>
+                <a href="awards-associations.html">Awards & Associations</a>
+                <a href="data-tools.html">Data & Tools</a>
+                <a href="economics.html">Economics</a>
+                <a href="finance.html">Finance</a>
+                <a href="insights.html">Insights</a>
+            </nav>
+        </div>
+    </header>
 
-        <a href="index.html" class="logo">GK<span>NOMICS</span></a>
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+        <div class="page-header-inner">
+            <div class="section-tag">Scholarship</div>
+            <h1>Publications</h1>
+            <p>Journal articles, book chapters and books on microfinance, development economics, financial inclusion, agriculture, inequality, circular economy and data.</p>
+        </div>
+    </div>
 
-        <nav>
-            <ul>
-                <li><a href="index.html#economics">Economics</a></li>
-                <li><a href="index.html#research">Research</a></li>
-                <li><a href="index.html#finance">Finance</a></li>
-                <li><a href="index.html#learn">Learn</a></li>
-                <li><a href="index.html#data">Data &amp; Tools</a></li>
-                <li><a href="index.html#insights">Insights</a></li>
-                <li><a href="index.html#about">About</a></li>
-            </ul>
-        </nav>
+    <!-- MAIN CONTENT -->
+    <div class="container">
+
+        <!-- JOURNAL ARTICLES -->
+        <h2>Journal Articles</h2>
+
+        <div class="pub-item">
+            <div class="pub-meta">2026</div>
+            <div class="pub-title">
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_HVAGUoAAAAJ&citation_for_view=_HVAGUoAAAAJ:1qzjygNMrQYC" target="_blank" rel="noopener">
+                    Can Microfinance Institutions Achieve the Double Bottom Line? Evidence from Global Panel Data
+                </a>
+            </div>
+            <div class="pub-citation">
+                Sarma, G.K. (2026). <em>International Journal of Social Science &amp; Economic Research</em>, Vol. 11(7), pp. 3112–3127.
+            </div>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-meta">2026</div>
+            <div class="pub-title">
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_HVAGUoAAAAJ&citation_for_view=_HVAGUoAAAAJ:V3AGJWp-ZtQC" target="_blank" rel="noopener">
+                    Mobile Banking and Microfinance Sustainability: Evidence from the Global MIX Market Database
+                </a>
+            </div>
+            <div class="pub-citation">
+                Sarma, G.K. (2026). <em>IOSR Journal of Economics and Finance</em>, Vol. 17(4), pp. 54–65.
+            </div>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-meta">2025</div>
+            <div class="pub-title">
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_HVAGUoAAAAJ&citation_for_view=_HVAGUoAAAAJ:J-pR_7NvFogC" target="_blank" rel="noopener">
+                    Circular Economy in India: A Review of Theoretical Foundations, Policy Evolution, Implementation Challenges, and Emerging Research Gaps
+                </a>
+            </div>
+            <div class="pub-citation">
+                Sarma, G.K. (2025). <em>Journal of Emerging Technologies and Innovative Research</em>, Vol. 12(5), pp. m31–m37.
+            </div>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-meta">2022</div>
+            <div class="pub-title">
+                <a href="https://www.jetir.org/view?paper=JETIR2208323" target="_blank" rel="noopener">
+                    Profitability of Irrigated Agriculture: A Case Study of Paddy Cultivation in Barpeta District, Assam
+                </a>
+            </div>
+            <div class="pub-citation">
+                Sarma, G.K. (2022). <em>Journal of Emerging Technologies and Innovative Research</em>, Vol. 9(8), pp. d191–d197.
+            </div>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-meta">2022</div>
+            <div class="pub-title">
+                <a href="https://ijsrem.com/download/exploring-the-gender-pay-gap-a-systematic-review-of-causes-and-magnitudes/" target="_blank" rel="noopener">
+                    Exploring the Gender Pay Gap: A Systematic Review of Causes and Magnitudes
+                </a>
+            </div>
+            <div class="pub-citation">
+                Sarma, G.K. (2022). <em>International Journal of Scientific Research in Engineering and Management</em>, Vol. 6(3), pp. 1–8.
+            </div>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-meta">2020</div>
+            <div class="pub-title">
+                <a href="https://buscompress.com/uploads/3/4/9/8/34980536/riber_9-s1_01_b19-094_1-9.pdf" target="_blank" rel="noopener">
+                    Microfinance: Impact on Clients, an Empirical Study
+                </a>
+            </div>
+            <div class="pub-citation">
+                Borbora, S. and Sarma, G.K. (2020). <em>Review of Integrative Business and Economics Research</em>, Vol. 9(s1), pp. 1–9.
+            </div>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-meta">2020</div>
+            <div class="pub-title">
+                <a href="https://ijsrem.com/download/sustainability-of-microfinance-outreach-insights-from-assams-mfi-model/" target="_blank" rel="noopener">
+                    Sustainability of Microfinance Outreach: Insights from Assam’s MFI Model
+                </a>
+            </div>
+            <div class="pub-citation">
+                Sarma, G.K. (2020). <em>International Journal of Scientific Research in Engineering and Management</em>, Vol. 4(2), pp. 1–12.
+            </div>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-meta">2020</div>
+            <div class="pub-title">
+                <a href="https://www.jetir.org/papers/JETIR2002544.pdf" target="_blank" rel="noopener">
+                    Repayment Dynamics in Microfinance Group Lending: Evidence from Assam
+                </a>
+            </div>
+            <div class="pub-citation">
+                Sarma, G.K. (2020). <em>Journal of Emerging Technologies and Innovative Research</em>, Vol. 7(1), pp. 793–801.
+            </div>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-meta">2018</div>
+            <div class="pub-title">
+                <a href="https://www.ijhssi.org/papers/vol7(10)/Version-2/A0710020106.pdf" target="_blank" rel="noopener">
+                    Impact of Microfinance: An Examination in the North East India
+                </a>
+            </div>
+            <div class="pub-citation">
+                Sarma, G.K. (2018). <em>International Journal of Humanities and Social Science Invention</em>, Vol. 7(10), pp. 1–6.
+            </div>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-meta">2015</div>
+            <div class="pub-title">
+                <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3129648" target="_blank" rel="noopener">
+                    Estimation of Microfinance Demand and Supply: With Special Reference to Assam
+                </a>
+            </div>
+            <div class="pub-citation">
+                Sarma, G.K. and Borbora, S. (2015). <em>International Journal of Social Sciences and Management</em>, Vol. 2, pp. 308–311.
+            </div>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-meta">2015</div>
+            <div class="pub-title">
+                <a href="https://www.ijsr.net/getabstract.php?paperid=SUB157075" target="_blank" rel="noopener">
+                    Growth of Income Inequality and its Trend in North Eastern States of India
+                </a>
+            </div>
+            <div class="pub-citation">
+                Sarma, G.K. (2015). <em>International Journal of Science and Research</em>, Vol. 4(7), pp. 2391–2394.
+            </div>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-meta">2015</div>
+            <div class="pub-title">
+                <a href="https://www.inderscienceonline.com/doi/abs/10.1504/IJEBR.2015.068554" target="_blank" rel="noopener">
+                    Efficiency of Microfinance Institutions and Branch Level Determinants: Empirical Evidence from Assam
+                </a>
+            </div>
+            <div class="pub-citation">
+                Sarma, G.K. (2015). <em>International Journal of Economics and Business Research</em>, Vol. 9(3), pp. 337–354.
+            </div>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-meta">2014</div>
+            <div class="pub-title">
+                <a href="https://www.ijsr.net/getabstract.php?paperid=SEP14237" target="_blank" rel="noopener">
+                    Loan Recovery Performance of Credit Officers in Microfinance Institutions: A Case of Assam
+                </a>
+            </div>
+            <div class="pub-citation">
+                Sarma, G.K. and Borbora, S. (2014). <em>International Journal of Science and Research</em>, Vol. 3(9), pp. 675–678.
+            </div>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-meta">2012</div>
+            <div class="pub-title">
+                <a href="https://www.financeindia.org/data/pdf/jun12/.pdf" target="_blank" rel="noopener">
+                    Sustainability of Microfinance under Microfinance Institution Model: A Case of Assam
+                </a>
+            </div>
+            <div class="pub-citation">
+                Sarma, G.K. and Borbora, S. (2012). <em>Finance India</em>, Vol. XXVII(1).
+            </div>
+        </div>
+
+        <!-- BOOK CHAPTERS -->
+        <h2>Book Chapters</h2>
+
+        <div class="pub-item">
+            <div class="pub-meta">2021</div>
+            <div class="pub-title">Investing in Adolescent Health: The Status of Assam</div>
+            <div class="pub-citation">
+                Sarma, G.K. (2021). In <em>Proceedings of MOMA sponsored National Workshop on Awareness Campaign on Reproductive Health among the Adolescent Girls of Minority Community under Chenga Block, Barpeta (Assam)</em>.
+            </div>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-meta">2017</div>
+            <div class="pub-title">Agricultural Credit in Assam: A Review of Recent Trends</div>
+            <div class="pub-citation">
+                Borbora, S. and Sarma, G.K. (2017). In Mishra, D.K. and Upadhyay, V. (Eds.), <em>Rethinking Economic Development in Northeast India: The Emerging Dynamics</em>. Routledge India.
+            </div>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-meta">2016</div>
+            <div class="pub-title">Micro-Finance Market and Financial Inclusion</div>
+            <div class="pub-citation">
+                Sarma, G.K. (2016). In Vanlalchawna and Lalhriatpui (Eds.), <em>Inclusive Finance in North-East India: Challenges and Prospects</em>. Concept Publishing Company Pvt. Ltd., New Delhi, pp. 25–44.
+            </div>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-meta">2010</div>
+            <div class="pub-title">Foreign Direct Investment in India in the Post-Liberalization Period: Trends, Challenges and Prospects</div>
+            <div class="pub-citation">
+                Dutta, M.K. and Sarma, G.K. (2010). In Verama, P., Bhaskaran, P. Bala and Madhani, P.M. (Eds.), <em>Globalization: Opportunities and Challenges</em>. Wisdom Publication, Delhi, pp. 18–32.
+            </div>
+        </div>
+
+        <!-- BOOKS -->
+        <h2>Books</h2>
+
+        <div class="pub-item">
+            <div class="pub-meta">2023</div>
+            <div class="pub-title"><em>Elements of Data Collection and Presentation</em></div>
+            <div class="pub-citation">
+                Sarma, G.K. (2023). Surya Prakash, Guwahati, Assam. ISBN: 978-93-95051-16-3.
+            </div>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-meta">2020</div>
+            <div class="pub-title"><em>Basics of Data Collection and Presentation</em></div>
+            <div class="pub-citation">
+                Sarma, G.K. (2020). Surya Prakash, Guwahati, Assam. ISBN: 9789389474381.
+            </div>
+        </div>
 
     </div>
-</header>
 
-<main>
-
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-content">
-        <div class="hero-tag">RESEARCH • PUBLICATIONS • SCHOLARSHIP</div>
-
-        <h1>Research Publications</h1>
-
+    <!-- FOOTER -->
+    <footer>
         <p>
-            A collection of journal articles, book chapters and books covering
-            microfinance, development, financial inclusion, agriculture,
-            inequality, circular economy and data.
+            <strong>GKNOMICS</strong><br>
+            Economics · Research · Education · Financial Education · Data
         </p>
-    </div>
-</section>
-
-
-<!-- JOURNAL PUBLICATIONS -->
-<section>
-    <div class="container">
-
-        <div class="section-tag">JOURNAL ARTICLES</div>
-
-        <h2 class="section-title">Research Publications</h2>
-
-        <p class="section-intro">
-            Research contributions across microfinance, financial inclusion,
-            development economics, agriculture, inequality, sustainability
-            and related areas.
-        </p>
-
-        <div class="publication-list">
-
-            <div class="publication">
-                <div class="pub-number">01 · 2026</div>
-                <h3>
-                    <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=_HVAGUoAAAAJ&amp;citation_for_view=_HVAGUoAAAAJ:1qzjygNMrQYC" target="_blank">
-                        Can Microfinance Institutions Achieve the Double Bottom Line? Evidence from Global Panel Data
-                    </a>
-                </h3>
-                <p class="citation">
-                    Sarma, G.K. (2026). <em>International Journal of Social Science &amp; Economic Research</em>,
-                    Vol. 11(7), pp. 3112-3127.
-                </p>
-            </div>
-
-            <div class="publication">
-                <div class="pub-number">02 · 2026</div>
-                <h3>
-                    <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=_HVAGUoAAAAJ&amp;citation_for_view=_HVAGUoAAAAJ:V3AGJWp-ZtQC" target="_blank">
-                        Mobile Banking and Microfinance Sustainability: Evidence from the Global MIX Market Database
-                    </a>
-                </h3>
-                <p class="citation">
-                    Sarma, G.K. (2026). <em>IOSR Journal of Economics and Finance</em>,
-                    Vol. 17(4), pp. 54-65.
-                </p>
-            </div>
-
-            <div class="publication">
-                <div class="pub-number">03 · 2025</div>
-                <h3>
-                    <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=_HVAGUoAAAAJ&amp;citation_for_view=_HVAGUoAAAAJ:J-pR_7NvFogC" target="_blank">
-                        Circular Economy in India: A Review of Theoretical Foundations, Policy Evolution, Implementation Challenges, and Emerging Research Gaps
-                    </a>
-                </h3>
-                <p class="citation">
-                    Sarma, G.K. (2025). <em>Journal of Emerging Technologies and Innovative Research</em>,
-                    Vol. 12(5), pp. m31-m37.
-                </p>
-            </div>
-
-            <div class="publication">
-                <div class="pub-number">04 · 2022</div>
-                <h3>
-                    <a href="https://www.jetir.org/view?paper=JETIR2208323" target="_blank">
-                        Profitability of Irrigated Agriculture: A Case Study of Paddy Cultivation in Barpeta District, Assam
-                    </a>
-                </h3>
-                <p class="citation">
-                    Sarma, G.K. (2022). <em>Journal of Emerging Technologies and Innovative Research</em>,
-                    Vol. 9(8), pp. d191-d197.
-                </p>
-            </div>
-
-            <div class="publication">
-                <div class="pub-number">05 · 2022</div>
-                <h3>
-                    <a href="https://ijsrem.com/download/exploring-the-gender-pay-gap-a-systematic-review-of-causes-and-magnitudes/" target="_blank">
-                        Exploring the Gender Pay Gap: A Systematic Review of Causes and Magnitudes
-                    </a>
-                </h3>
-                <p class="citation">
-                    Sarma, G.K. (2022). <em>International Journal of Scientific Research in Engineering and Management</em>,
-                    Vol. 6(3), pp. 1-8.
-                </p>
-            </div>
-
-            <div class="publication">
-                <div class="pub-number">06 · 2020</div>
-                <h3>
-                    <a href="https://buscompress.com/uploads/3/4/9/8/34980536/riber_9-s1_01_b19-094_1-9.pdf" target="_blank">
-                        Microfinance: Impact on Clients, an Empirical Study
-                    </a>
-                </h3>
-                <p class="citation">
-                    Borbora, S. and Sarma, G.K. (2020). <em>Review of Integrative Business and Economics Research</em>,
-                    Vol. 9(s1), pp. 1-9.
-                </p>
-            </div>
-
-            <div class="publication">
-                <div class="pub-number">07 · 2020</div>
-                <h3>
-                    <a href="https://ijsrem.com/download/sustainability-of-microfinance-outreach-insights-from-assams-mfi-model/" target="_blank">
-                        Sustainability of Microfinance Outreach: Insights from Assam's MFI Model
-                    </a>
-                </h3>
-                <p class="citation">
-                    Sarma, G.K. (2020). <em>International Journal of Scientific Research in Engineering and Management</em>,
-                    Vol. 4(2), pp. 1-12.
-                </p>
-            </div>
-
-            <div class="publication">
-                <div class="pub-number">08 · 2020</div>
-                <h3>
-                    <a href="https://www.jetir.org/view?paper=JETIR2001103" target="_blank">
-                        What Drives Microfinance Loan Repayment? Field-based Evidence from Assam
-                    </a>
-                </h3>
-                <p class="citation">
-                    Sarma, G.K. (2020). <em>Journal of Emerging Technologies and Innovative Research</em>,
-                    Vol. 7(2), pp. 965-970.
-                </p>
-            </div>
-
-            <div class="publication">
-                <div class="pub-number">09 · 2020</div>
-                <h3>
-                    <a href="https://www.jetir.org/papers/JETIR2002544.pdf" target="_blank">
-                        Repayment Dynamics in Microfinance Group Lending: Evidence from Assam
-                    </a>
-                </h3>
-                <p class="citation">
-                    Sarma, G.K. (2020). <em>Journal of Emerging Technologies and Innovative Research</em>,
-                    Vol. 7(1), pp. 793-801.
-                </p>
-            </div>
-
-            <div class="publication">
-                <div class="pub-number">10 · 2018</div>
-                <h3>
-                    <a href="https://www.ijhssi.org/papers/vol7(10)/Version-2/A0710020106.pdf" target="_blank">
-                        Impact of Microfinance: An Examination in the North East India
-                    </a>
-                </h3>
-                <p class="citation">
-                    Sarma, G.K. (2018). <em>International Journal of Humanities and Social Science Invention</em>,
-                    Vol. 7, No. 10, pp. 1-6.
-                </p>
-            </div>
-
-            <div class="publication">
-                <div class="pub-number">11 · 2015</div>
-                <h3>
-                    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3129648" target="_blank">
-                        Estimation of Microfinance Demand and Supply: With Special Reference to Assam
-                    </a>
-                </h3>
-                <p class="citation">
-                    Sarma, G.K. and Borbora, S. (2015). <em>International Journal of Social Sciences and Management</em>,
-                    Vol. 2, pp. 308-311.
-                </p>
-            </div>
-
-            <div class="publication">
-                <div class="pub-number">12 · 2015</div>
-                <h3>
-                    <a href="https://www.ijsr.net/getabstract.php?paperid=SUB157075" target="_blank">
-                        Growth of Income Inequality and its Trend in North Eastern States of India
-                    </a>
-                </h3>
-                <p class="citation">
-                    Sarma, G.K. (2015). <em>International Journal of Science and Research</em>,
-                    Vol. 4, No. 7, pp. 2391-2394.
-                </p>
-            </div>
-
-            <div class="publication">
-                <div class="pub-number">13 · 2015</div>
-                <h3>
-                    <a href="https://www.inderscienceonline.com/doi/abs/10.1504/IJEBR.2015.068554" target="_blank">
-                        Efficiency of Microfinance Institutions and Branch Level Determinants: Empirical Evidence from Assam
-                    </a>
-                </h3>
-                <p class="citation">
-                    Sarma, G.K. (2015). <em>International Journal of Economics and Business Research</em>,
-                    Vol. 9, No. 3, pp. 337-354.
-                </p>
-            </div>
-
-            <div class="publication">
-                <div class="pub-number">14 · 2014</div>
-                <h3>
-                    <a href="https://www.ijsr.net/getabstract.php?paperid=SEP14237" target="_blank">
-                        Loan Recovery Performance of Credit Officers in Microfinance Institutions: A Case of Assam
-                    </a>
-                </h3>
-                <p class="citation">
-                    Sarma, G.K. and Borbora, S. (2014). <em>International Journal of Science and Research</em>,
-                    Vol. 3, No. 9, pp. 675-678.
-                </p>
-            </div>
-
-            <div class="publication">
-                <div class="pub-number">15 · 2012</div>
-                <h3>
-                    <a href="https://www.financeindia.org/data/pdf/jun12/.pdf" target="_blank">
-                        Sustainability of Microfinance under Microfinance Institution Model: A Case of Assam
-                    </a>
-                </h3>
-                <p class="citation">
-                    Sarma, G.K. and Borbora, S. (2012). <em>Finance India</em>,
-                    Vol. XXVII(1).
-                </p>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-<!-- BOOK CHAPTERS -->
-<section class="alternate-section">
-    <div class="container">
-
-        <div class="section-tag">BOOK CHAPTERS</div>
-        <h2 class="section-title">Chapters in Books and Edited Volumes</h2>
-
-        <div class="publication-list">
-
-            <div class="publication">
-                <div class="pub-number">01 · 2021</div>
-                <h3>Investing in Adolescent Health: The Status of Assam</h3>
-                <p class="citation">
-                    Sarma, G.K. (2021). In Proceedings of MOMA sponsored National Workshop
-                    on Awareness Campaign on Reproductive Health among the Adolescent Girls
-                    of Minority Community under Chenga Block, Barpeta (Assam).
-                </p>
-            </div>
-
-            <div class="publication">
-                <div class="pub-number">02 · 2017</div>
-                <h3>Agricultural Credit in Assam: A Review of Recent Trends</h3>
-                <p class="citation">
-                    Borbora, S. and Sarma, G.K. (2017). In Mishra, D.K. and Upadhyay, V. (Eds.),
-                    <em>Rethinking Economic Development in Northeast India: The Emerging Dynamics</em>.
-                    Routledge India.
-                </p>
-            </div>
-
-            <div class="publication">
-                <div class="pub-number">03 · 2016</div>
-                <h3>Micro-Finance Market and Financial Inclusion</h3>
-                <p class="citation">
-                    Sarma, G.K. (2016). In Vanlalchawna and Lalhriatpui (Eds.),
-                    <em>Inclusive Finance in North-East India: Challenges and Prospects</em>.
-                    Concept Publishing Company Pvt. Ltd., New Delhi, pp. 25-44.
-                </p>
-            </div>
-
-            <div class="publication">
-                <div class="pub-number">04 · 2010</div>
-                <h3>Foreign Direct Investment in India in the Post-Liberalization Period: Trends, Challenges and Prospects</h3>
-                <p class="citation">
-                    Dutta, M.K. and Sarma, G.K. (2010). In Verama, P., Bhaskaran, P. Bala
-                    and Madhani, P.M. (Eds.), <em>Globalization: Opportunities and Challenges</em>.
-                    Wisdom Publication, Delhi, pp. 18-32.
-                </p>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-<!-- BOOKS -->
-<section>
-    <div class="container">
-
-        <div class="section-tag">BOOKS</div>
-        <h2 class="section-title">Books</h2>
-
-        <div class="publication-list">
-
-            <div class="publication">
-                <div class="pub-number">01 · 2023</div>
-                <h3><em>Elements of Data Collection and Presentation</em></h3>
-                <p class="citation">
-                    Sarma, G.K. (2023). Surya Prakash, Guwahati, Assam.
-                    ISBN: 978-93-95051-16-3.
-                </p>
-            </div>
-
-            <div class="publication">
-                <div class="pub-number">02 · 2020</div>
-                <h3><em>Basics of Data Collection and Presentation</em></h3>
-                <p class="citation">
-                    Sarma, G.K. (2020). Surya Prakash, Guwahati, Assam.
-                    ISBN: 9789389474381.
-                </p>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-</main>
-
-
-<footer>
-    <div class="footer-container">
-
-        <div class="footer-logo">GKNOMICS</div>
-
-        <p class="footer-text">
-            Economics • Research • Financial Education • Data • Learning
-        </p>
-
-        <div class="copyright">
-            © 2026 GKNOMICS. All rights reserved.
-        </div>
-
-    </div>
-</footer>
+    </footer>
 
 </body>
 </html>
