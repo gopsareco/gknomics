@@ -1,1 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic & Working Life | GKNOMICS</title>
+    <meta name="description" content="Academic qualifications, teaching and research experience of Gopal Kumar Sarma – economist and founder of GKNOMICS.">
+    <style>
+        :root {
+            --primary: #17324d;
+            --secondary: #285b72;
+            --accent: #e9a23b;
+            --light: #f5f7fa;
+            --white: #ffffff;
+            --text: #243746;
+            --muted: #61717c;
+            --border: #d9e1e7;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--light);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        /* HEADER – ONE LINE */
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 16px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: 800;
+            letter-spacing: 1.8px;
+            color: var(--primary);
+            text-decoration: none;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            gap: 2px;
+            overflow-x: auto;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 13.2px;
+            padding: 6px 8px;
+            white-space: nowrap;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* PAGE HEADER */
+        .page-header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 48px 28px 40px;
+        }
+
+        .page-header-inner {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .section-tag {
+            color: var(--accent);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .page-header h1 {
+            color: var(--primary);
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 12px;
+        }
+
+        .page-header p {
+            color: var(--muted);
+            font-size: 17px;
+            max-width: 640px;
+        }
+
+        /* MAIN CONTENT */
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 56px 28px 70px;
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 22px;
+            font-weight: 700;
+            margin: 48px 0 22px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h2:first-child {
+            margin-top: 0;
+        }
+
+        /* EDUCATION */
+        .edu-item {
+            margin-bottom: 28px;
+        }
+
+        .edu-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .edu-degree {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 17px;
+            margin-bottom: 4px;
+        }
+
+        .edu-institution {
+            color: var(--text);
+            font-size: 15.5px;
+            margin-bottom: 3px;
+        }
+
+        .edu-year {
+            color: var(--muted);
+            font-size: 14.5px;
+        }
+
+        .edu-thesis {
+            margin-top: 8px;
+            font-size: 14.5px;
+            color: var(--muted);
+            line-height: 1.55;
+            padding-left: 12px;
+            border-left: 2px solid var(--border);
+        }
+
+        /* EXPERIENCE LIST */
+        .exp-item {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 16px;
+            margin-bottom: 26px;
+            padding-bottom: 26px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .exp-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .exp-dates {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.45;
+        }
+
+        .exp-role {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 16px;
+            margin-bottom: 3px;
+        }
+
+        .exp-place {
+            font-size: 15px;
+            color: var(--text);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--primary);
+            color: #d5e0e7;
+            text-align: center;
+            padding: 26px 20px;
+            font-size: 13.5px;
+        }
+
+        footer strong {
+            color: var(--white);
+        }
+
+        /* MOBILE */
+        @media (max-width: 980px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+                padding: 14px 20px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                gap: 4px 6px;
+            }
+
+            nav a {
+                font-size: 13px;
+                padding: 5px 7px;
+            }
+
+            .page-header h1 {
+                font-size: 26px;
+            }
+
+            .exp-item {
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
+
+            .exp-dates {
+                order: 2;
+                font-size: 13.5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo">GKNOMICS</a>
+            <nav>
+                <a href="index.html">About</a>
+                <a href="academic-working-life.html">Academic & Working Life</a>
+                <a href="courses.html">Courses</a>
+                <a href="research.html">Research</a>
+                <a href="publications.html">Publications</a>
+                <a href="training-presentations.html">Training & Presentations</a>
+                <a href="awards-associations.html">Awards & Associations</a>
+                <a href="data-tools.html">Data & Tools</a>
+                <a href="economics.html">Economics</a>
+                <a href="finance.html">Finance</a>
+                <a href="insights.html">Insights</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+        <div class="page-header-inner">
+            <div class="section-tag">Academic Profile</div>
+            <h1>Academic & Working Life</h1>
+            <p>Education, teaching and research experience of Gopal Kumar Sarma.</p>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+
+        <!-- EDUCATION -->
+        <h2>Education</h2>
+
+        <div class="edu-item">
+            <div class="edu-degree">PhD</div>
+            <div class="edu-institution">Indian Institute of Technology Guwahati</div>
+            <div class="edu-year">2014</div>
+            <div class="edu-thesis">
+                Thesis: <em>Microfinance Repayment Performance and Related Issues in Microfinance Institutions Model: An Empirical Examination in the Brahmaputra Valley of Assam, India</em>
+            </div>
+        </div>
+
+        <div class="edu-item">
+            <div class="edu-degree">M.A. (Economics)</div>
+            <div class="edu-institution">University of Pune</div>
+            <div class="edu-year">2002</div>
+        </div>
+
+        <div class="edu-item">
+            <div class="edu-degree">B.A. (Economics)</div>
+            <div class="edu-institution">Gauhati University</div>
+            <div class="edu-year">1999</div>
+        </div>
+
+        <!-- TEACHING EXPERIENCE -->
+        <h2>Teaching Experience</h2>
+
+        <div class="exp-item">
+            <div class="exp-dates">15 November 2025 – Present</div>
+            <div>
+                <div class="exp-role">Associate Professor</div>
+                <div class="exp-place">Department of Economics, B.B.K. College, Nagaon, Barpeta</div>
+            </div>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-dates">14 August 2019 – 13 August 2022</div>
+            <div>
+                <div class="exp-role">Assistant Professor (Stage 3)</div>
+                <div class="exp-place">Department of Economics, B.B.K. College, Nagaon, Barpeta</div>
+            </div>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-dates">14 August 2014 – 13 August 2019</div>
+            <div>
+                <div class="exp-role">Assistant Professor (Stage 2)</div>
+                <div class="exp-place">Department of Economics, B.B.K. College, Nagaon, Barpeta</div>
+            </div>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-dates">14 August 2010 – 13 August 2014</div>
+            <div>
+                <div class="exp-role">Assistant Professor (Stage 1)</div>
+                <div class="exp-place">Department of Economics, B.B.K. College, Nagaon, Barpeta</div>
+            </div>
+        </div>
+
+        <!-- RESEARCH EXPERIENCE -->
+        <h2>Research Experience</h2>
+
+        <div class="exp-item">
+            <div class="exp-dates">July 2009 – June 2011</div>
+            <div>
+                <div class="exp-role">Senior Research Fellow</div>
+                <div class="exp-place">Department of Humanities and Social Sciences, Indian Institute of Technology Guwahati, Assam, India</div>
+            </div>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-dates">July 2006 – June 2009</div>
+            <div>
+                <div class="exp-role">Junior Research Fellow</div>
+                <div class="exp-place">Department of Humanities and Social Sciences, Indian Institute of Technology Guwahati, Assam, India</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            <strong>GKNOMICS</strong><br>
+            Economics · Research · Education · Financial Education · Data
+        </p>
+    </footer>
+
+</body>
+</html>
